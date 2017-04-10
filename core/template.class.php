@@ -28,13 +28,11 @@
 		//The assigned Parameters {url} etc.
 		function SetParams()
 		{
-			global $_CONFIG, $user;
+			global $_CONFIG;
 			$this->Assign('url', $_CONFIG['site']['url']); //{URL} Site URL
 			$this->Assign('tpl', $_CONFIG['site']['template']); //{TPL} Skin Name
-			if(isset($_SESSION['user']['id']))
-			{
-			$this->Assign('username', $user->getUserInfo('username', $_SESSION['user']['id'])); //{USERNAME} prints the username
-			}
+			$this->Assign('site_name', $_CONFIG['site']['name']); //{SITE_NAME} Site Name
+			$this->Assign('twapi', $_CONFIG['site']['twapi']); //{TWAPI} Twitter API number
 		}
 		//This function takes the set params and turns them into an actual function
 		function Assign($_searchString, $_replaceString)
@@ -45,7 +43,7 @@
 			}
 		}
 		//Add Template Pieces (Basically import raw PHP // I'm confident there is a bettter way but for now #YOLO)
-		
+
 		//Combines everything and echo's the template
 		function Show()
 		{

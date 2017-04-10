@@ -3,10 +3,10 @@ require 'global.php';
 
 	$template->Show($template->SetParams());
 
-	if (!isset($_GET['page'])) 
+	if (!isset($_GET['page']))
 	{
-		header("Location: ?page=index");
-	} 
+		header("Location: index");
+	}
 	else{}
 
 ?>
