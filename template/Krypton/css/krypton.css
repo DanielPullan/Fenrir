@@ -1,0 +1,101 @@
+.col-md-3 {
+    padding-bottom: 2%;
+}
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+.navbar-collapse {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+}
+
+/* i grabbed this snippet online and tweaked it */
+
+.nav-tabs {
+    border-bottom: 2px solid #DDD;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+    border-width: 0;
+}
+.nav-tabs > li > a {
+    border: none;
+    color: #2c3e50;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li > a:hover {
+    border: none;
+    color: #2c3e50 !important;
+    background: transparent;
+}
+.nav-tabs > li > a::after {
+    content: "";
+    background: #2c3e50;
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    bottom: -1px;
+    transition: all 250ms ease 0s;
+    transform: scale(0);
+}
+.nav-tabs > li.active > a::after,
+.nav-tabs > li:hover > a::after {
+    transform: scale(1);
+}
+.tab-nav > li > a::after {
+    background: #2c3e50 none repeat scroll 0% 0%;
+    color: #fff;
+}
+.tab-pane {
+    padding: 15px 0;
+}
+.tab-content {
+    padding: 20px
+}
+.card {
+    background: #FFF none repeat scroll 0% 0%;
+    margin-bottom: 30px;
+}
+
+/* end of snippet */
+
+.nav>li>a:hover,
+.nav>li>a:focus {
+    background: none;
+}
+.input-group {
+    padding-bottom: 20px;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}
+.currentuser {
+    text-transform: capitalize;
+}
+.alert {
+    border: 0px;
+    border-radius: 0px;
+}
+.gridtext {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+}
+.gridimage {
+    padding-bottom: 5px;
+}
+.articlesubmitbutton {
+    margin-top: 10px;
+}
