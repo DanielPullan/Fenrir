@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>{SITE_NAME} - Thoriums</title>
+    <title>{SITE_NAME}</title>
     <link rel="stylesheet" href="{URL}/template/{TPL}/style.css">
     <link rel="stylesheet" href="{URL}/template/{TPL}/simple-grid.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
@@ -14,7 +14,7 @@
 
   <div class="row header">
       <div class="col-7">
-          <h1 class="headerText">Poole High School</h1>
+          <h1 class="headerText">{SITE_NAME}</h1>
       </div>
       <div class="col-2">
           <ul>
@@ -40,6 +40,34 @@
     <div class="col-3">
         <div class="slider datePanel">
             <ul>
+                <?php
+                $servername = "localhost";
+                $username = "root";
+                $password = "1123";
+                $dbname = "Thorium";
+
+                // Create connection
+                $conn = mysqli_connect($servername, $username, $password, $dbname);
+                // Check connection
+                if (!$conn) {
+                    die("Connection failed: " . mysqli_connect_error());
+                }
+
+                    $sql = "SELECT id, title, description, date FROM calendar";
+                $result = mysqli_query($conn, $sql);
+
+                if (mysqli_num_rows($result) > 0) {
+                    // output data of each row
+                    while($row = mysqli_fetch_assoc($result)) {
+                        echo "<li><p class='calendarText'>" . $row["date"] . " " . $row["title"] . "</p> <p class='calendarText'>" . $row["description"] . "</p>" . "<br>";
+                    }
+                } else {
+                    echo "0 results";
+                }
+
+                mysqli_close($conn);
+                ?>
+
             </ul>
         </div>
     </div>

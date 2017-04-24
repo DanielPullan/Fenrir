@@ -8,8 +8,9 @@
 	$_CONFIG['mysql']['db'] = 'Thorium'; //Select the database you want to connect too
 	//Site Configuration
 	$_CONFIG['site']['url'] = 'http://localhost'; //Server URL example.com (DOES NOT END WITH /)
-	$_CONFIG['site']['name'] = 'Thorium'; //Website name, {SITE_NAME}
+	$_CONFIG['site']['name'] = 'Poole High School'; //Website name, {SITE_NAME}
 	$_CONFIG['site']['template'] = 'Thorium'; //Krypton Template System, Select the Template Directory
 	$_CONFIG['site']['tw'] = 'poole_high'; //Your website Twitter profile link
 	$_CONFIG['site']['fb'] = 'poolehs'; //Your website facebook page link
+	$_CONFIG['site']['twapi'] = 'https://twitter.com/poole_high'; //Your website twitter API
 ?>
