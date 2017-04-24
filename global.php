@@ -1,17 +1,13 @@
 <?php
 
-define('C', '/core');
-define('M', '/manage');
-
-
 //Required Files
 
 	//Config
-	require_once C . M . '/config.php';
+	require_once(__DIR__.'/core/manage/config.php');
 
 	//Class Files
-	require_once C . '/template.class.php';
-	require_once C . '/mysql.class.php';
+	require_once(__DIR__.'/core/template.class.php');
+	require_once(__DIR__.'/core/mysql.class.php');
 
 	//Template System Information
 	$tplDes = $_CONFIG['site']['template'];

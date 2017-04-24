@@ -32,7 +32,8 @@
 			$this->Assign('url', $_CONFIG['site']['url']); //{URL} Site URL
 			$this->Assign('tpl', $_CONFIG['site']['template']); //{TPL} Skin Name
 			$this->Assign('site_name', $_CONFIG['site']['name']); //{SITE_NAME} Site Name
-			$this->Assign('twapi', $_CONFIG['site']['twapi']); //{TWAPI} Twitter API number
+			$this->Assign('tw', $_CONFIG['site']['tw']); //{TW} Twitter
+			$this->Assign('fb', $_CONFIG['site']['fb']); //{FB} Facebook
 		}
 		//This function takes the set params and turns them into an actual function
 		function Assign($_searchString, $_replaceString)

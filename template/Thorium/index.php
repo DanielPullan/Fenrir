@@ -26,7 +26,7 @@
       <div class="col-3">
           <div class="headerList">
               <ul>
-                <li><p><i class='fa fa-facebook fa'></i> POOLEHS</p></li><li><p><i class='fa fa-twitter fa'></i>POOLE_HIGH</p></li>
+                <li><p><i class='fa fa-facebook fa'></i> {fb}</p></li><li><p><i class='fa fa-twitter fa'></i>{tw}</p></li>
               </ul>
           </div>
       </div>
