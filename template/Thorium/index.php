@@ -76,7 +76,7 @@
         <div id="slider">
             <ul>
                 <?php
-                $dirname = "template/thorium/images/";
+                $dirname = "images/";
                 $images = glob($dirname."*.*");
 
                 foreach($images as $image) {
