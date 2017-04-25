@@ -75,33 +75,13 @@
     <div class="col-7">
         <div id="slider">
             <ul>
-                // I know this is the complete wrong way, but I don't know the right way. Will finish it this way and fix it later.
                 <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "1123";
-                $dbname = "Thorium";
+                $dirname = "template/thorium/images/";
+                $images = glob($dirname."*.*");
 
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
-                // Check connection
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-
-                    $sql = "SELECT imageLink FROM gallery";
-                $result = mysqli_query($conn, $sql);
-
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><img src='template/thorium/images/" . $row["imageLink"] . "' /></li> ";
-                    }
-                } else {
-                    echo "0 results";
-                }
-
-                mysqli_close($conn);
+                foreach($images as $image) {
+                echo "<li><img src='".$image."' /><br /></li>";
+            }
                 ?>
             </ul>
         </div>
