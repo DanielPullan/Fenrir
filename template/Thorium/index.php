@@ -40,7 +40,7 @@
     <div class="col-3">
         <div class="slider datePanel">
             <ul>
-                // I know this is the complete wrong way, but I don't know the right way. Will finish it this way and fix it later.
+                <!--  I know this is the complete wrong way, but I don't know the right way. Will finish it this way and fix it later. -->
                 <?php
                 $servername = "localhost";
                 $username = "root";
@@ -60,7 +60,7 @@
                 if (mysqli_num_rows($result) > 0) {
                     // output data of each row
                     while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><p class='calendarText'>" . $row["date"] . " " . $row["title"] . "</p> <p class='calendarText'>" . $row["description"] . "</p>" . "<br>";
+                        echo "<li><p class='calendarTextHead'>" . $row["title"] . "</p> <p class='calendarTextDate'>" . $row["date"] . "</p> <p class='calendarText'>" . $row["description"] . "</p>" . " ";
                     }
                 } else {
                     echo "0 results";
@@ -87,22 +87,10 @@
         </div>
     </div>
     <div class="col-2">
+        <ul>
         <a class="twitter-timeline" href="{TWAPI}" data-chrome="noscrollbar" data-width="400" data-height="500" tweet-limit="3">
         </a>
-    </div>
-</div>
-
-<div class="row">
-
-    <div class="col-2">
-        <ul>
-            <li>
-                <a href="https://danielpullan.co.uk"><i class="fa fa-code fa"></i> Daniel Pullan</a>
-            </li>
-            <li>
-                <a href="https://github.com/danielpullan/thorium"><i class="fa fa-github fa"></i> Github</a>
-            </li>
-        </ul>
+    </ul>
     </div>
 </div>
 

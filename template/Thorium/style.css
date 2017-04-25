@@ -122,7 +122,20 @@ pre {
     color: var(--text-colour);
 }
 .calendarText {
-    padding: 10px;
+    padding-left: 12px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+.calendarTextDate {
+    padding-left: 12px;
+    padding-right: 5px;
+    font-weight: lighter;
+    font-size: smaller;
+}
+.calendarTextHead {
+    padding-left: 10px;
+    padding-right: 5px;
+    font-weight: bold;
 }
 .box {
     border: 1px solid #fff;
