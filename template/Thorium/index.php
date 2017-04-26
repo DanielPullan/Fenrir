@@ -40,34 +40,7 @@
     <div class="col-3">
         <div class="slider datePanel">
             <ul>
-                <!--  I know this is the complete wrong way, but I don't know the right way. Will finish it this way and fix it later. -->
-                <?php
-                $servername = "localhost";
-                $username = "root";
-                $password = "1123";
-                $dbname = "Thorium";
-
-                // Create connection
-                $conn = mysqli_connect($servername, $username, $password, $dbname);
-                // Check connection
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
-
-                    $sql = "SELECT id, title, description, date FROM calendar";
-                $result = mysqli_query($conn, $sql);
-
-                if (mysqli_num_rows($result) > 0) {
-                    // output data of each row
-                    while($row = mysqli_fetch_assoc($result)) {
-                        echo "<li><p class='calendarTextHead'>" . $row["title"] . "</p> <p class='calendarTextDate'>" . $row["date"] . "</p> <p class='calendarText'>" . $row["description"] . "</p>" . " ";
-                    }
-                } else {
-                    echo "0 results";
-                }
-
-                mysqli_close($conn);
-                ?>
+                <!--  Hiding my shame. -->
 
             </ul>
         </div>
@@ -113,7 +86,7 @@
             height: slideHeight
         });
         $('#slider ul').css({
-            
+
         });
         $('#slider ul li:last-child').prependTo('#slider ul');
         function moveLeft() {
