@@ -113,8 +113,7 @@
             height: slideHeight
         });
         $('#slider ul').css({
-            width: sliderUlWidth,
-            marginLeft: -slideWidth
+            
         });
         $('#slider ul li:last-child').prependTo('#slider ul');
         function moveLeft() {
